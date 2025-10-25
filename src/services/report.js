@@ -1,5 +1,5 @@
 // report.js
-const pool = require('./db');
+const pool = require('../db/db');
 
 async function getAgeDistribution() {
   const res = await pool.query('SELECT age FROM public.users WHERE age IS NOT NULL');

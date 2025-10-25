@@ -1,5 +1,5 @@
 // inserter.js
-const pool = require('./db');
+const pool = require('../db/db');
 
 async function insertInBatches(rows, batchSize = 1000) {
   if (!rows.length) return 0;
