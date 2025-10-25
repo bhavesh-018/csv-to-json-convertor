@@ -1,11 +1,11 @@
 // index.js
 require('dotenv').config();
 const express = require('express');
-const { parseCSVFileSync } = require('./csvParser');
-const { rowToNestedObject, mapToDbRow } = require('./mapper');
-const { insertInBatches } = require('./inserter');
-const { getAgeDistribution } = require('./report');
-const pool = require('./db');
+const { parseCSVFileSync } = require('./parsers/csvParser');
+const { rowToNestedObject, mapToDbRow } = require('./services/mapper');
+const { insertInBatches } = require('./services/inserter');
+const { getAgeDistribution } = require('./services/report');
+const pool = require('./db/db');
 
 const app = express();
 app.use(express.json());
