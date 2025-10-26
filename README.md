@@ -9,12 +9,16 @@ A Node.js + PostgreSQL application that converts CSV files into structured JSON 
 csv-json-importer/
 ├── data/
 │   └── users.csv                 # CSV file to import
-├── db.js                         # PostgreSQL connection pool
-├── csvParser.js                  # Custom CSV parser
-├── mapper.js                     # CSV row → nested JSON → DB row
-├── inserter.js                   # Batch insert logic
-├── report.js                     # Age distribution calculator
-├── index.js                      # Express app entry point
+├── src
+|   └──db/
+|       └──db.js                         # PostgreSQL connection pool
+|   └──parsers/
+|       └──csvParser.js                  # Custom CSV parser
+|   └── services/
+|       └──mapper.js                     # CSV row → nested JSON → DB row
+|       └──inserter.js                   # Batch insert logic
+|       └──report.js                     # Age distribution calculator
+|   └──index.js                      # Express app entry point
 ├── .env                          # Local environment variables (ignored)
 ├── .env.example                  # Template for env setup
 ├── package.json
